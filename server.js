@@ -381,5 +381,9 @@ const server = http.createServer(async (req, res) => {
     send(res, typeof e.code === 'number' ? e.code : 500, { error: typeof e.code === 'number' ? e.message : 'Something went wrong on the server.' });
   }
 });
-if (require.main === module) server.listen(PORT, () => console.log(`PetPuja running at http://localhost:${PORT}`));
+if (require.main === module) {
+  server.listen(PORT, '0.0.0.0', () => {
+    console.log(`PetPuja running on port ${PORT}`);
+  });
+}
 module.exports = { server, db, hashPw };
