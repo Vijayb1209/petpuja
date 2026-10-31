@@ -1,0 +1,15 @@
+{
+  "name": "petpuja",
+  "version": "1.0.0",
+  "description": "PetPuja - single-restaurant ordering platform (customer, admin and rider portals)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server.js",
+    "test": "node --disable-warning=ExperimentalWarning --test",
+    "demo": "node --disable-warning=ExperimentalWarning seed-demo.js"
+  },
+  "engines": {
+    "node": ">=22.5"
+  },
+  "license": "MIT"
+}
